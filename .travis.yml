@@ -13,8 +13,7 @@ before_install:
   - gem install asciidoctor-pdf --pre # pour générer le PDF
 
 script:
-# mettez ici compilation et génération de documentation
-
+  asciidoctor README.adoc -o ma_page.html
 deploy:
   # section de configuration des github pages
   provider: pages
