@@ -1,0 +1,24 @@
+[run]
+source = fizzbuzz/
+omit = setup.py
+       .tox/*
+
+[report]
+# À la fin de l'exercice 4, il subsiste deux lignes
+# que nos tests unitaires ne peuvent pas "couvrir" :
+# les lignes 7 et 13 de fizzbuzz/solver.py.
+# En effet, il s'agit du corps de deux méthodes abstraites
+# qui, de plus, ne font absolument rien.
+# En conséquence, j'ai choisi grâce à la directive exclude_lines suivante
+# de configurer coverage pour qu'il ignore toute ligne contenant l'expression
+# "pragma: no cover".
+# Ainsi, il est possible, ponctuellement, de définir que si certaines lignes
+# de notre code ne sont pas testées, ben ... C'est pas grave.
+# Cependant, j'insiste sur le fait que recourir à cet méthode doit
+# rester _EXCEPTIONNEL_, et dans tous les cas mûrement réfléchi.
+# Ce n'est pas une manière d'éviter d'avoir à rendre son code testable,
+# et encore moins d'éviter d'écrire des tests supplémentaires.
+# Ce genre de "trucs" vous donne une autre raison de considérer que
+# le "100% de code couvert par les tests" n'est pas une assurance qualité
+# si fiable que ça ...
+exclude_lines = pragma: no cover

@@ -1,0 +1,12 @@
+
+Ce corrigé de TP est lui-même un dépôt git.
+
+La résolution de chaque exercice fait l'objet d'un commit séparé.
+Vous pouvez en voir la list avec une commande du type `git log`.
+
+Chaque commit à son propre 'hash', c'est à dire son propre identifiant unique.
+Donc, vous pouvez voir chacune des étapes du corrigé avec une commande du type `git checkout <hash>`.
+
+Si vous ne vous souvenez pas du hash qui correspond à un exercice particulier,
+vous pouvez toujours revenir au dernier exercice avec une commande du type `git checkout master`,
+puis faire un `git log` pour avoir le hash désiré.
